@@ -61,9 +61,9 @@ int main(int argc, char* argv[]) {
         std::uniform_int_distribution<> dis(1, 4);
 
         // Test animation
-        int pixels[160][144];
-        for(int i = 0; i < 160; i++) {
-            for(int j = 0; j < 144; j++) {
+        int pixels[256][256];
+        for(int i = 0; i < 256; i++) {
+            for(int j = 0; j < 256; j++) {
                 pixels[i][j] = dis(gen);
             }
         }
