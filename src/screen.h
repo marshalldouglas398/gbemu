@@ -7,13 +7,14 @@ class Screen {
     private:
         // Screen has 160 x 144 resolution
         // Map has 256 x 256 resolution
-        int map[256][256]; // Light -> Dark | 1, 2, 3 | 0 is transparent
+        uint8_t map[256][256]; // Light -> Dark | 1, 2, 3 | 0 is transparent
+        uint8_t sprites;
 
     public:
         // Default constructor
         Screen() {
-            for(int i = 0; i < 255; i++) {
-                for(int j = 0; j < 255; j++) {
+            for(int i = 0; i < 256; i++) {
+                for(int j = 0; j < 256; j++) {
                     map[i][j] = 1;
                 }
             }
@@ -25,14 +26,14 @@ class Screen {
         }
 
         // Getter
-        int (&getMap())[256][256] {
+        unit8_t (&getMap())[256][256] {
             return map;
         }
 
         // Setter
         void setMap(int map[256][256]) {
-            for(int i = 0; i < 255; i++) {
-                for(int j = 0; j < 255; j++) {
+            for(int i = 0; i < 256; i++) {
+                for(int j = 0; j < 256; j++) {
                     this -> map[i][j] = map[i][j];
                 }
             }
